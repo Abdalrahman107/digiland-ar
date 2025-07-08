@@ -1,0 +1,86 @@
+{
+  "navbar": {
+    "brand": "DIGILAND",
+    "home": "Home",
+    "feature": "Feature",
+    "about": "About",
+    "product": "Product",
+    "faq": "Faq",
+    "review": "Review",
+    "contact": "Contact",
+    "buy_now": "Buy Now"
+  },
+  "hero": {
+    "title": "Turn Your Digital Product Into a Visual Experience.",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    "cta": "Discover Now"
+  },
+  "features": {
+  "easy_config": {
+    "title": "Easy Configuration",
+    "desc": "Lorem ipsum dolor sit amet consectetur"
+  },
+  "live_service": {
+    "title": "Live Service",
+    "desc": "Lorem ipsum dolor sit amet consectetur"
+  },
+  "user_friendly": {
+    "title": "User Friendly",
+    "desc": "Lorem ipsum dolor sit amet consectetur"
+  },
+  "secure": {
+    "title": "100% Secure",
+    "desc": "Lorem ipsum dolor sit amet consectetur"
+  }
+},
+"about": {
+  "title": "Experience the Future on Your Wrist",
+  "description": "Our latest smartwatch helps you stay connected, healthy, and stylish. With features like heart rate tracking, GPS, and app notifications, it's your all-in-one daily companion.",
+  "watch_video": "Watch Product Video"
+},
+"product": {
+  "title": "Popular Digital Products"
+},
+  "faq": {
+    "heading": "FAQ",
+    "subheading": "Read Some of Our Product Related Information",
+    "q1": "How to Reset my watch?",
+    "a1": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "q2": "Can I Demand for this watch?",
+    "a2": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "q3": "How much Price Digital Watch?",
+    "a3": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "q4": "How many features in this Watch?",
+    "a4": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+    "download_title": "Download Our Mobile App",
+    "download_description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis facilis adipisci, quia alias doloribus autem."
+  },
+"testimonials": {
+  "title": "What Customers Say",
+  "description": "Whether at dearest certain spirits is entered in to. Rich fine bred real use too many good. She compliment unaffected expression favourable any.",
+  "cta": "View All"
+},
+"contact": {
+  "title": "Get in Touch",
+  "firstname_label": "First Name",
+  "firstname_placeholder": "Enter First Name",
+  "lastname_label": "Last Name",
+  "lastname_placeholder": "Enter Last Name",
+  "email_label": "Email",
+  "email_placeholder": "Enter Email",
+  "phone_label": "Phone",
+  "phone_placeholder": "Enter Phone",
+  "message_label": "Message",
+  "message_placeholder": "Write Something Here...",
+  "submit": "Inquiry Now!",
+  "address_label": "Address",
+  "address_value": "23789 Homer Blvd, Springfield, TX",
+  "email_label1": "Email",
+  "phone_label1": "Call Us",
+  "phone_value": "+1(234)567-8910"
+},
+"footer": {
+  "copyright": "©2025 <span class='text-red-500 font-semibold'>DIGILAND</span> | Designed by <span class='text-red-500 font-bold'>AA</span>. All Rights Reserved"
+}
+
+}

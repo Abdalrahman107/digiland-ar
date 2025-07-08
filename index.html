@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- owl carousal -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- font awesome -->
+    <link href="./css/all.min.css" rel="stylesheet" />
+    <!-- main css file after tailwind -->
+    <link href="./css/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-white text-gray-800">
+    <!-- Navbar Container -->
+    <header
+      id="navbar"
+      class="bg-[rgba(0,0,0,0.6)] text-white fixed top-0 left-0 w-full z-50 transition-colors duration-500">
+      <div class="c-container mx-auto py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center gap-2">
+          <img src="/images/logo.png" alt="Logo" class="h-10 w-10 rounded-full" />
+          <h2 class="text-2xl font-bold text-red-500" data-i18n="navbar.brand">DIGILAND</h2>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center space-x-6 font-medium">
+          <a href="#hero_section" class="nav-link hover:text-red-400" data-i18n="navbar.home">Home</a>
+          <a href="#feature_section" class="nav-link hover:text-red-400" data-i18n="navbar.feature">Feature</a>
+          <a href="#about_section" class="nav-link hover:text-red-400" data-i18n="navbar.about">About</a>
+          <a href="#product_section" class="nav-link hover:text-red-400" data-i18n="navbar.product">Product</a>
+          <a href="#faq_section" class="nav-link hover:text-red-400" data-i18n="navbar.faq">Faq</a>
+          <a href="#testimonial_section" class="nav-link hover:text-red-400" data-i18n="navbar.review">Review</a>
+          <a href="#contact_section" class="nav-link hover:text-red-400" data-i18n="navbar.contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-x-6">
+          <!-- language toggle -->
+          <div class="inline-flex items-center gap-2">
+            <span class="text-sm">EN</span>
+            <label class="relative inline-block w-11 h-5 cursor-pointer">
+              <input id="lang-toggle" type="checkbox" class="sr-only peer" checked/>
+              <div
+                class="w-11 h-5 bg-slate-100 rounded-full peer-checked:bg-slate-100 transition-colors duration-300"></div>
+              <div
+                class="absolute top-0 left-0 rtl:-left-6 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800"></div>
+            </label>
+            <span class="text-sm">AR</span>
+          </div>
+
+          <!-- dark/light mode button -->
+          <button id="theme-toggle" class="cursor-pointer">
+            <span id="theme-icon"><i class="text-2xl hover:text-red-500 fa-solid fa-moon"></i></span>
+          </button>
+
+          <!-- Mobile menu Icon -->
+          <button id="menu-toggle" class="cursor-pointer lg:hidden text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="c-container hidden lg:hidden flex-col items-center px-4 py-4 space-y-3 font-medium">
+        <a href="#hero_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.home">Home</a>
+        <a href="#feature_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.feature"
+          >Feature</a
+        >
+        <a href="#about_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.about"
+          >About</a
+        >
+        <a href="#product_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.product"
+          >Product</a
+        >
+        <a href="#faq_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.faq">Faq</a>
+        <a href="#testimonial_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.review"
+          >Review</a
+        >
+        <a href="#contact_section" class="block text-center nav-link hover:text-red-400" data-i18n="navbar.contact"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section
+        id="hero_section"
+        class="relative py-20 min-h-screen flex items-center bg-cover bg-center bg-no-repeat bg-fixed text-white"
+        style="background-image: url('images/products.jpg')">
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10"></div>
+        <div class="c-container mx-auto px-4 relative z-20">
+          <div class="flex flex-col md:flex-row items-center justify-center gap-x-6">
+            <div data-aos="fade-left" class="w-full md:w-1/2">
+              <div class="space-y-6">
+                <h2 class="text-3xl md:text-4xl text-red-500 font-bold uppercase" data-i18n="hero.title">
+                  Turn Your Digital Product Into a Visual Experience.
+                </h2>
+                <p class="text-gray-300" data-i18n="hero.description">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+                  data-i18n="hero.cta">
+                  Discover Now
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Image -->
+            <div
+              data-aos="fade-right"
+              class="w-full -order-1 md:order-0 md:w-1/2 flex justify-center mb-6 md:mb-0 transform rtl:scale-x-[-1]">
+              <img src="/images/hero3.png" alt="Hero" class="w-full rounded-full" />
+            </div>
+          </div>
+        </div>
+        <svg class="absolute bottom-0 left-0 w-full z-20" viewBox="0 0 100 100" preserveAspectRatio="none" height="80">
+          <polygon class="fill-gray-100 dark:fill-gray-900" points="0,100 100,0 100,100" />
+        </svg>
+      </section>
+
+      <!-- feature section -->
+      <section
+        id="feature_section"
+        class="bg-gray-100 dark:bg-gray-900 relative py-24 overflow-hidden min-h-[80vh] flex items-center">
+        <div class="c-container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-12">
+            <!-- Left Features -->
+            <div class="space-y-12 text-center">
+              <!-- Feature Box 1 -->
+              <div
+                data-aos="fade-down"
+                class="group space-y-3 bg-gray-200 dark:bg-gray-800 p-4 shadow-lg rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-blue-500">
+                <div class="text-4xl text-red-500 group-hover:text-white transition duration-300">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.easy_config.title">
+                  Easy Configuration
+                </h3>
+                <p
+                  class="text-gray-600 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.easy_config.desc">
+                  Lorem ipsum dolor sit amet consectetur
+                </p>
+              </div>
+
+              <!-- Feature Box 2 -->
+              <div
+                data-aos="fade-up"
+                class="group space-y-3 bg-gray-200 dark:bg-gray-800 p-4 shadow-lg rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-blue-500">
+                <div class="text-4xl text-red-500 group-hover:text-white transition duration-300">
+                  <i class="fa-solid fa-message"></i>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.live_service.title">
+                  Live Service
+                </h3>
+                <p
+                  class="text-gray-600 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.live_service.desc">
+                  Lorem ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </div>
+
+            <!-- Middle Image -->
+            <div data-aos="fade-up" class="flex justify-center -rotate-25 transform scale-x-[-1]">
+              <img src="/images/camera1.jpg" alt="Feature Image" class="w-1/2 md:w-full object-cover rounded-xl" />
+            </div>
+
+            <!-- Right Features -->
+            <div class="space-y-12 text-center">
+              <!-- Feature Box 3 -->
+              <div
+                data-aos="fade-down"
+                class="group space-y-3 bg-gray-200 dark:bg-gray-800 p-4 shadow-lg rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-blue-500">
+                <div class="text-4xl text-red-500 group-hover:text-white transition duration-300">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.user_friendly.title">
+                  User Friendly
+                </h3>
+                <p
+                  class="text-gray-600 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.user_friendly.desc">
+                  Lorem ipsum dolor sit amet consectetur
+                </p>
+              </div>
+
+              <!-- Feature Box 4 -->
+              <div
+                data-aos="fade-up"
+                class="group space-y-3 bg-gray-200 dark:bg-gray-800 p-4 shadow-lg rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-blue-500">
+                <div class="text-4xl text-red-500 group-hover:text-white transition duration-300">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.secure.title">
+                  100% Secure
+                </h3>
+                <p
+                  class="text-gray-600 dark:text-white group-hover:text-white transition duration-300"
+                  data-i18n="features.secure.desc">
+                  Lorem ipsum dolor sit amet consectetur
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section
+        id="about_section"
+        class="relative flex items-center min-h-[80vh] py-16 bg-fixed bg-cover bg-center bg-no-repeat text-white"
+        style="background-image: url('images/products1.jpg')">
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10"></div>
+
+        <div
+          class="c-container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-10 relative z-20">
+          <!-- Left Content -->
+          <div
+            data-aos="fade-up-right"
+            class="w-full sm:w-1/2 space-y-6 text-center sm:text-start lg:text-left lg:rtl:text-right">
+            <h2 class="text-4xl font-bold text-red-500" data-i18n="about.title">Experience the Future on Your Wrist</h2>
+            <p data-i18n="about.description">
+              Our latest smartwatch helps you stay connected, healthy, and stylish. With features like heart rate
+              tracking, GPS, and app notifications, it's your all-in-one daily companion.
+            </p>
+
+            <!-- Video Play Button -->
+            <button
+              id="openModalBtn"
+              class="mt-4 inline-flex items-center gap-2 bg-blue-500 cursor-pointer text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
+              data-i18n="about.watch_video">
+              <i class="fa-solid fa-circle-play text-xl"></i> Watch Product Video
+            </button>
+          </div>
+
+          <!-- Right Image -->
+          <div data-aos="fade-up-left" class="-order-1 md:order-1 w-1/2 sm:w-1/3 flex justify-center">
+            <img src="/images/feature1.png" alt="Smartwatch" class="w-full" />
+          </div>
+        </div>
+
+        <!-- Top SVG Shape -->
+        <svg class="absolute top-0 left-0 w-full z-20" viewBox="0 0 100 100" preserveAspectRatio="none" height="80">
+          <polygon class="fill-gray-100 dark:fill-gray-900" points="0,0 100,100 100,0" />
+        </svg>
+      </section>
+
+      <!-- Video Modal -->
+      <div id="videoModal" class="fixed inset-0 bg-[rgba(0,0,0,0.3)] hidden items-center justify-center z-50">
+        <div class="relative bg-white rounded-lg shadow-lg w-[90%] md:w-[720px] max-w-full p-4">
+          <!-- Close Button -->
+          <button id="closeModalBtn" class="absolute top-0 right-0 cursor-pointer text-red-500 text-4xl">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <!-- YouTube Video -->
+          <div class="aspect-w-16 aspect-h-9">
+            <iframe
+              id="youtubeFrame"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Smartwatch Video"
+              class="w-full h-96 rounded"
+              frameborder="0"
+              allow="autoplay; encrypted-media;"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- product section -->
+      <section id="product_section" class="bg-gray-100 dark:bg-gray-900 py-12 min-h-[80vh] flex items-center">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-10 dark:text-white" data-i18n="product.title">
+            Popular Digital Products
+          </h2>
+
+          <div class="owl-carousel testimonial-carousel owl-theme">
+            <!-- Card 1 -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer p-4 text-center">
+              <img src="/images/smartphone.jpeg" alt="Smart Phone" class="w-full h-54 object-ccover" />
+              <h3 class="mt-4 font-semibold text-lg dark:text-white">Smart Phone Pro</h3>
+              <p class="text-red-500 font-bold mt-2">$149.00</p>
+              <div class="text-yellow-400 mt-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer p-4 text-center">
+              <img src="/images/earbuds.jpeg" alt="Earbuds" class="w-full h-54 object-cover" />
+              <h3 class="mt-4 font-semibold text-lg dark:text-white">Wireless Earbuds</h3>
+              <p class="text-red-500 font-bold mt-2">$89.00</p>
+              <div class="text-yellow-400 mt-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer p-4 text-center">
+              <img src="/images/smart watch.jpg" alt="smart watch" class="w-full h-54 object-cover" />
+              <h3 class="mt-4 font-semibold text-lg dark:text-white">Smart Watch</h3>
+              <p class="text-red-500 font-bold mt-2">$120.00</p>
+              <div class="text-yellow-400 mt-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:scale-110 transition-all duration-500 cursor-pointer p-4 text-center">
+              <img src="/images/headphones.jpg" alt="headphones" class="w-full h-54 object-cover" />
+              <h3 class="mt-4 font-semibold text-lg dark:text-white">Headphones</h3>
+              <p class="text-red-500 font-bold mt-2">$180.00</p>
+              <div class="text-yellow-400 mt-2">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- faq section -->
+      <section
+        id="faq_section"
+        class="relative py-20 min-h-[70vh] bg-fixed bg-cover bg-center bg-no-repeat"
+        style="background-image: url('images/download.jpeg')">
+        <span
+          class="c-container text-center text-red-500 text-4xl font-semibold block animate__animated animate__fadeInDown relative z-20 mb-4"
+          data-i18n="faq.heading"
+          style="--animate-duration: 3s">
+          FAQ
+        </span>
+
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10"></div>
+
+        <div class="c-container flex flex-col items-center">
+          <div class="px-4 relative z-20 mb-8 w-full sm:w-2/3">
+            <div class="text-center mb-12">
+              <h2
+                class="text-3xl md:text-4xl font-bold text-white animate__animated animate__fadeInUp"
+                data-i18n="faq.subheading"
+                style="--animate-duration: 4s">
+                Read Some of Our Product Related Information
+              </h2>
+            </div>
+
+            <div class="space-y-4" id="faqAccordion">
+              <!-- Item 1 -->
+              <div class="border rounded-lg overflow-hidden">
+                <button
+                  class="cursor-pointer w-full flex justify-between items-center px-6 py-4 text-left bg-[rgba(0,0,0,0.7)] text-white font-semibold faq-toggle"
+                  data-target="#faq1">
+                  <span data-i18n="faq.q1">How to Reset my watch?</span>
+                  <span class="toggle-icon text-xl">+</span>
+                </button>
+                <div
+                  id="faq1"
+                  class="faq-content hidden px-6 py-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+                  data-i18n="faq.a1">
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in some form.
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="border rounded-lg overflow-hidden">
+                <button
+                  class="cursor-pointer w-full flex justify-between items-center px-6 py-4 text-left bg-[rgba(0,0,0,0.7)] text-white font-semibold faq-toggle"
+                  data-target="#faq2">
+                  <span data-i18n="faq.q2">Can I Demand for this watch?</span>
+                  <span class="toggle-icon text-xl">+</span>
+                </button>
+                <div
+                  id="faq2"
+                  class="faq-content hidden px-6 py-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+                  data-i18n="faq.a2">
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in some form.
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="border rounded-lg overflow-hidden">
+                <button
+                  class="cursor-pointer w-full flex justify-between items-center px-6 py-4 text-left bg-[rgba(0,0,0,0.7)] text-white font-semibold faq-toggle"
+                  data-target="#faq3">
+                  <span data-i18n="faq.q3">How much Price Digital Watch?</span>
+                  <span class="toggle-icon text-xl">-</span>
+                </button>
+                <div
+                  id="faq3"
+                  class="faq-content block px-6 py-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+                  data-i18n="faq.a3">
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in some form.
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="border rounded-lg overflow-hidden">
+                <button
+                  class="cursor-pointer w-full flex justify-between items-center px-6 py-4 text-left bg-[rgba(0,0,0,0.7)] text-white font-semibold faq-toggle"
+                  data-target="#faq4">
+                  <span data-i18n="faq.q4">How many features in this Watch?</span>
+                  <span class="toggle-icon text-xl">+</span>
+                </button>
+                <div
+                  id="faq4"
+                  class="faq-content hidden px-6 py-4 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200"
+                  data-i18n="faq.a4">
+                  There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                  alteration in some form.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- App download block -->
+          <div class="px-4 text-white relative z-20 w-full">
+            <div class="flex flex-col items-center justify-center gap-4">
+              <!-- Text Section -->
+              <div class="w-full lg:w-1/2 text-center">
+                <div class="mb-6">
+                  <h2 class="text-4xl text-red-500 font-bold mb-4" data-i18n="faq.download_title">
+                    Download Our Mobile App
+                  </h2>
+                  <p data-i18n="faq.download_description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis facilis adipisci, quia alias
+                    doloribus autem.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Download Buttons -->
+              <div class="w-full lg:w-1/2 flex justify-center">
+                <ul class="flex gap-6 flex-wrap justify-center">
+                  <li>
+                    <a href="#">
+                      <img src="images/googleplay.png" alt="Google Play" class="h-14 hover:scale-105 transition" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/appstore.png" alt="Apple Store" class="h-14 hover:scale-105 transition" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonial section -->
+      <section id="testimonial_section" class="py-16 min-h-[80vh] flex items-center bg-gray-100 dark:bg-gray-900">
+        <div class="c-container mx-auto px-4">
+          <div class="grid grid-cols-3 gap-10 items-center">
+            <div class="relative col-span-3 md:col-span-1">
+              <h2
+                class="relative z-40 text-3xl font-bold text-gray-800 dark:text-white mb-4"
+                data-i18n="testimonials.title">
+                What Customers Say
+              </h2>
+              <p class="text-gray-600 dark:text-gray-300 mb-6" data-i18n="testimonials.description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus aliquam harum ex optio enim doloribus exercitationem. Illum esse maxime dicta.
+              </p>
+              <a
+                href="#"
+                class="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-full transition-all duration-300"
+                data-i18n="testimonials.cta">
+                View All <i class="ml-1 block fa-solid fa-angle-right"></i>
+              </a>
+
+              <i
+                class="absolute text-9xl text-slate-200 dark:text-slate-700 -top-1/4 rtl:-top-1/3 z-20 rtl:-right-2 -left-2 fa-solid fa-quote-left"></i>
+            </div>
+
+            <!-- Owl Carousel -->
+            <div class="col-span-3 md:col-span-2 px-8 ltr:border-l-3 rtl:border-r-3">
+              <div class="owl-carousel brand-carousel owl-theme">
+                <!-- Slide 1 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-1/4">
+                      <img src="images/avatar.jpg" alt="Kate" class="w-full object-contain" />
+                    </div>
+                    <div class="">
+                      <h4 class="font-semibold text-lg dark:text-white">Kate Peterson</h4>
+                      <p class="text-gray-500 dark:text-gray-300 text-sm">Regular client</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error nobis itaque eveniet, voluptates
+                    incidunt omnis.
+                  </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-1/4">
+                      <img src="images/avatar.jpg" alt="Kate" class="w-full object-contain" />
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg dark:text-white">Peter Smith</h4>
+                      <p class="text-gray-500 dark:text-gray-300 text-sm">Regular client</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minus et possimus, aliquam
+                    voluptatem molestias?
+                  </p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-1/4">
+                      <img src="images/avatar.jpg" alt="Kate" class="w-full object-contain" />
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-lg dark:text-white">Jane Williams</h4>
+                      <p class="text-gray-500 dark:text-gray-300 text-sm">Regular client</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo beatae magni laboriosam, accusamus
+                    unde dolores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact us section -->
+      <section
+        id="contact_section"
+        class="relative min-h-[80vh] py-16 text-white bg-cover bg-center bg-no-repeat"
+        style="background-image: url('images/contact.jpg')">
+        <div class="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10"></div>
+        <div class="c-container mx-auto px-4 relative z-20">
+          <div class="p-8">
+            <!-- Contact Form Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <div data-aos="fade-up" data-aos-duration="900">
+                <div class="mb-6">
+                  <h3 class="text-2xl uppercase tracking-widest text-red-500" data-i18n="contact.title">
+                    Get in Touch
+                  </h3>
+                </div>
+                <form id="inquiry-form" class="space-y-4">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label for="firstname" class="block text-sm mb-1" data-i18n="contact.firstname_label"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        id="firstname"
+                        data-i18n-placeholder="contact.firstname_placeholder"
+                        placeholder="Enter First Name"
+                        class="w-full px-4 py-2 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label for="lastname" class="block text-sm mb-1" data-i18n="contact.lastname_label"
+                        >Last Name</label
+                      >
+                      <input
+                        type="text"
+                        id="lastname"
+                        data-i18n-placeholder="contact.lastname_placeholder"
+                        placeholder="Enter Last Name"
+                        class="w-full px-4 py-2 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label for="email" class="block text-sm mb-1" data-i18n="contact.email_label">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        data-i18n-placeholder="contact.email_placeholder"
+                        placeholder="Enter Email"
+                        class="w-full px-4 py-2 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label for="phone" class="block text-sm mb-1" data-i18n="contact.phone_label">Phone</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        data-i18n-placeholder="contact.phone_placeholder"
+                        placeholder="Enter Phone"
+                        class="w-full px-4 py-2 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="message" class="block text-sm mb-1" data-i18n="contact.message_label">Message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      data-i18n-placeholder="contact.message_placeholder"
+                      placeholder="Write Something Here..."
+                      class="w-full px-4 py-2 rounded bg-gray-700 text-white outline-none focus:ring-2 focus:ring-blue-500 max-h-20"></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="cursor-pointer mt-4 inline-block text-gray-900 bg-white font-semibold px-6 py-3 rounded hover:bg-blue-500 hover:text-white transition"
+                    data-i18n="contact.submit">
+                    Inquiry Now!
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-duration="900">
+              <!-- Address -->
+              <div class="bg-[rgba(0,0,0,0.6)] text-white p-6 rounded-lg relative overflow-hidden">
+                <h3 class="text-red-500 text-xl font-semibold mb-2">
+                  <i class="fa-solid fa-location-dot block mr-2 rtl:ml-2 rtl:mr-0"></i>
+                  <span data-i18n="contact.address_label">Address</span>
+                </h3>
+                <p class="text-sm mb-4" data-i18n="contact.address_value">23789 Homer Blvd, Srpingfield, TX</p>
+              </div>
+
+              <!-- Phone -->
+              <div class="bg-[rgba(0,0,0,0.6)] text-white p-6 rounded-lg relative overflow-hidden">
+                <h3 class="text-red-500 text-xl font-semibold mb-2">
+                  <i class="fa-solid fa-phone block mr-2 rtl:ml-2 rtl:mr-0"></i>
+                  <span data-i18n="contact.phone_label1">Call Us</span>
+                </h3>
+                <a href="tel:+12345678910" class="text-sm font-medium" data-i18n="contact.phone_value"
+                  >+1(234)567-8910</a
+                >
+              </div>
+
+              <!-- Email -->
+              <div class="bg-[rgba(0,0,0,0.6)] text-white p-6 rounded-lg relative overflow-hidden">
+                <h3 class="text-red-500 text-xl font-semibold mb-2">
+                  <i class="fa-solid fa-envelope block mr-2 rtl:ml-2 rtl:mr-0"></i>
+                  <span data-i18n="contact.email_label1">Email</span>
+                </h3>
+                <a href="mailto:info@example.com" class="text-sm font-medium">info@example.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer_section" class="bg-gray-700 dark:bg-gray-900 text-white py-14">
+      <div class="c-container mx-auto px-4">
+        <div class="flex flex-col justify-center items-center gap-6">
+          <!-- Social Icons -->
+          <div class="flex justify-center md:justify-start">
+            <ul class="flex space-x-4">
+              <li>
+                <a href="#" class="hover:text-blue-500 transition">
+                  <i class="fab fa-facebook-f text-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-400 transition">
+                  <i class="fa-brands fa-x-twitter text-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500 transition">
+                  <i class="fab fa-instagram text-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-blue-700 transition">
+                  <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Copyright -->
+          <div class="text-center md:text-right">
+            <p class="text-sm text-gray-400" data-i18n="footer.copyright">
+              ©2025 <span class="text-red-500 font-semibold">DIGILAND</span> | Designed by
+              <span class="text-red-500 font-bold">AA</span>. All Rights Reserved
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Pre loader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-gray-900">
+      <span class="loader"></span>
+    </div>
+
+    <!-- AOS / animate on scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        once: true,
+      });
+    </script>
+
+    <!-- jquery -->
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <!-- owl carousal -->
+    <script src="/js/owl.carousel.min.js"></script>
+    <!-- translation i18next -->
+    <script src="https://unpkg.com/i18next@21.6.16/dist/umd/i18next.min.js"></script>
+    <!-- main.js -->
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
