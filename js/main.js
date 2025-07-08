@@ -197,7 +197,7 @@ function updateContent() {
 
 // Load translation file and switch language
 function loadLanguage(lang) {
-  fetch(`../public/Locales/${lang}.json`)
+  fetch(`../Locales/${lang}.json`)
     .then((res) => res.json())
     .then((data) => {
       i18next.addResourceBundle(lang, "translation", data, true, true);
