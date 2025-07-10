@@ -18,10 +18,8 @@
     --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-300: oklch(86.9% 0.022 252.894);
-    --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-slate-800: oklch(27.9% 0.041 260.031);
-    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -33,10 +31,6 @@
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-xs: 20rem;
-    --container-sm: 24rem;
-    --container-md: 28rem;
-    --container-4xl: 56rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
@@ -59,7 +53,6 @@
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --blur-sm: 8px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -262,29 +255,11 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
-  .-left-0 {
-    left: calc(var(--spacing) * -0);
-  }
-  .-left-1 {
-    left: calc(var(--spacing) * -1);
-  }
-  .-left-1\/2 {
-    left: calc(calc(1/2 * 100%) * -1);
-  }
   .-left-2 {
     left: calc(var(--spacing) * -2);
   }
-  .-left-6 {
-    left: calc(var(--spacing) * -6);
-  }
-  .-left-full {
-    left: -100%;
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-full {
-    left: 100%;
   }
   .z-10 {
     z-index: 10;
@@ -1092,14 +1067,9 @@
       right: calc(var(--spacing) * -2);
     }
   }
-  .rtl\:right-2 {
+  .rtl\:-order-1 {
     &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
-      right: calc(var(--spacing) * 2);
-    }
-  }
-  .rtl\:-left-6 {
-    &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
-      left: calc(var(--spacing) * -6);
+      order: calc(1 * -1);
     }
   }
   .rtl\:mr-0 {
@@ -1116,6 +1086,11 @@
     &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
       --tw-scale-x: -1;
       scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .rtl\:flex-row-reverse {
+    &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
+      flex-direction: row-reverse;
     }
   }
   .rtl\:border-r-3 {

@@ -194,7 +194,6 @@ function updateContent() {
   }
 }
 
-
 // Load translation file and switch language
 function loadLanguage(lang) {
   fetch(`../Locales/${lang}.json`)
